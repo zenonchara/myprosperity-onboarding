@@ -1,0 +1,88 @@
+.form-group {
+  position: relative;
+  // $input-btn-padding-y:         .375rem !default;
+  // $input-btn-padding-x:         .75rem !default;
+  label {
+    position: absolute;
+    color: $gray-500;
+    left: $input-btn-padding-x;
+    top: $input-btn-padding-y;
+    font-size: $small-font-size;
+  }
+
+  .form-control {
+    height: 3.5em;
+    padding-top: 1.65em;
+  }
+}
+
+.form-control.file-upload {
+  position: relative;
+  background: none;
+
+  .file-upload-input {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+
+  .file-ipload-filename {
+  }
+
+  .file-upload-preview {
+    height: 1em;
+    display: inline;
+    margin-right: 5px;
+  }
+
+  > .close {
+    position: absolute;
+    top: 50%;
+    right: 0.5em;
+    margin-top: -0.5em;
+  }
+}
+
+label,
+input[type="file"] {
+  cursor: pointer;
+}
+
+.btn-Next {
+  border-radius: 50px;
+  margin: 1em auto;
+  display: block;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.plan-image {
+  max-width: 100%;
+  display: block;
+}
+
+.amount-shortcut-list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+  .amount-shortcut {
+    background:none;
+    border:none;
+    opacity: .5;
+    margin-right: .5em;
+    color: $gray-600;
+    border-radius:2px;
+
+    &:hover {
+      opacity: 1;
+      background: $gray-200;
+    }
+  }
+}

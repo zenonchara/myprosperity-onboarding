@@ -1,0 +1,62 @@
+.feature-list {
+  column-width: 150px;
+  column-gap: 35px;
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+.priority-radio-group {
+  padding: 1em 0;
+  border-bottom: 1px solid $gray-200;
+  display: flex;
+  justify-content: space-between;
+
+  &-label {
+    line-height: 40px;
+  }
+
+  &-options {
+    display: flex;
+    > .custom-radio {
+      margin-bottom: 0;
+      padding: 0.5em 0.85em;
+      padding-left: 2em;
+      margin: 0 0.5em;
+      border-radius: 1em;
+      background: $gray-100;
+      input:checked + .custom-control-label {
+        color: $primary;
+      }
+
+      &.option-high .custom-control-input:checked ~ .custom-control-label {
+        color: #3dabc9;
+        &::before {
+          border-color: #3dabc9;
+          background-color: #3dabc9;
+        }
+      }
+
+      &.option-low .custom-control-input:checked ~ .custom-control-label {
+        color: $text-muted;
+        &::before {
+          border-color: $text-muted;
+          background-color: $text-muted;
+        }
+      }
+    }
+  }
+}
+
+.plans-list {
+  .custom-control {
+    margin-bottom: 1em;
+    padding: 0.75em 1.5em;
+    padding-left: 2.5em;
+    border-radius: 2em;
+    border: 1px solid $gray-200;
+    input:checked + .custom-control-label {
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0 10px;
+
+  .pagination-item {
+    margin: 6px;
+  }
+
+  .pagination-link {
+    border-radius: 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: relative;
+
+    background: $primary;
+    opacity: 0.2;
+
+    .pagination-label {
+      top: -50px;
+      left: -30px;
+      display: none;
+    }
+
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 4px transparentize($primary, 0.8);
+      .pagination-label {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}

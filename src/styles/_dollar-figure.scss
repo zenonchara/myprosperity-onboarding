@@ -1,0 +1,21 @@
+.dollar-figure {
+  position: relative;
+  width: 115px;
+
+  .count-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .dollar-figure-amount {
+    top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    height: 100px;
+    line-height: 100px;
+    padding-top: 6px;
+  }
+  &.no-number .dollar-figure-amount {
+    @extend .text-muted;
+  }
+}

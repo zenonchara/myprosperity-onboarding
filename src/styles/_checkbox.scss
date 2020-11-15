@@ -1,0 +1,47 @@
+.checkbox-group {
+  @extend .ml-lg-5;
+  > .custom-checkbox {
+    margin-bottom: 0.5em;
+    padding: 3px;
+    border-radius: 3px;
+  }
+}
+
+.checkbox-group.checkbox-group-columns {
+  column-width: 280px;
+  column-gap: 2.5em;
+}
+
+.custom-checkbox {
+  break-inside: avoid-column;
+  &.custom-checkbox-with-image {
+    padding: 0.5em;
+    border-bottom: 1px solid $gray-200;
+    border-radius: 0;
+    margin: 0;
+    .checkbox-icon {
+      height: 2.5em;
+      width: 2.5em;
+      margin-right: 0.5em;
+    }
+
+    .custom-control-label {
+      margin-left: 1.5em;
+      &::before,
+      &::after {
+        top: 0.7em;
+      }
+    }
+  }
+}
+
+.checkbox-group.features-list {
+  margin-top: 2em;
+
+  .custom-checkbox {
+    border: 1px solid $gray-200;
+    padding: 0.5em 2.5em;
+    border-radius: 5em;
+    margin-bottom: 1em;
+  }
+}
