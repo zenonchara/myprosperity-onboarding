@@ -8,7 +8,7 @@ import image from "assets/partner-dashboard-laptop-mp 1.png";
 
 import { partnerDashboardUrl, postUrl } from "app/data/http";
 
-import { planPage as nextPage } from "app/data/navigation";
+import { featuresPage as nextPage } from "app/data/navigation";
 
 export default connect(
   (state) => ({

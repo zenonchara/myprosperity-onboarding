@@ -4,6 +4,8 @@ export const baseLogoPath =
 export const accountingIntegrations = [
   { label: "MYOB", value: "myob", logoUrl: "logo_myob.png" },
   { label: "Xero Practice Manager", value: "xero", logoUrl: "logo_xero.png" },
+  { label: "BGL", value: "bgl", logoUrl: "logo_bgl.png" },
+  { label: "Class", value: "class", logoUrl: "logo_class.png" },
 ];
 
 export const financialIntegrations = [
@@ -13,8 +15,6 @@ export const financialIntegrations = [
     value: "australian_money_market",
     logoUrl: "logo_australian_money_market.png",
   },
-  { label: "BGL", value: "bgl", logoUrl: "logo_bgl.png" },
-  { label: "Class", value: "class", logoUrl: "logo_class.png" },
   { label: "HUB24", value: "hub24", logoUrl: "logo_hub24.png" },
   { label: "IOOF", value: "ioof", logoUrl: "logo_ioof.png" },
   {

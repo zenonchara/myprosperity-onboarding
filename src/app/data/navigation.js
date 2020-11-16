@@ -4,6 +4,7 @@ import ServicesPage from "app/pages/services/servicesPage";
 import FeaturesPage from "app/pages/features/featuresPage";
 import IntegrationsPage from "app/pages/integrations/integrationsPage";
 import DemoPage from "app/pages/demo/demoPage";
+import FinalPage from "app/pages/final/finalPage";
 import PlansPage from "app/pages/plans/plansPage";
 import PrioritiesPage from "../pages/priorities/prioritiesPage";
 
@@ -36,7 +37,7 @@ export const servicesPage = {
 };
 
 export const featuresPage = {
-  index: 3,
+  index: 6,
   label: "Features",
   path: "/features",
   component: FeaturesPage,
@@ -63,6 +64,13 @@ export const demoPage = {
   component: DemoPage,
 };
 
+export const finalPage = {
+  index: 99,
+  label: "Submit",
+  path: "/final",
+  component: FinalPage,
+};
+
 export default [
   contactPage,
   firmPage,
@@ -70,5 +78,7 @@ export default [
   prioritiesPage,
   integrationsPage,
   demoPage,
+  featuresPage,
   planPage,
+  finalPage
 ];

@@ -1,8 +1,25 @@
 .feature-list {
-  column-width: 150px;
-  column-gap: 35px;
+  column-width: 220px;
+  column-gap: 40px;
+  width: 740px;
+  margin: 0 auto;
   li {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+    break-inside: avoid;
+    padding: 20px 0;
+    background: $gray-100;
+    border-radius: 8px;
+    .fal {
+      font-size: 2.4rem;
+      text-align:center;
+      display: block;
+      margin-bottom: .3rem;
+    }
+    .feature-label {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
   }
 }
 

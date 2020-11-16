@@ -1,26 +1,48 @@
 import React from "react";
 import { connect } from "react-redux";
 import numeral from "numeral";
+import { isEmpty, filter } from "lodash";
 
 import PageTitle from "app/common/components/pageTitle";
 
 import FirmForm from "./firmForm";
 import { setFirm } from "./firmSlice";
+import { setServices } from "app/pages/services/servicesSlice";
+
 import DollarFigure from "./dollarFigure";
+
 import clientValues from "app/data/clientValues";
+import servicesList from "app/data/services";
+
 import { servicesPage as nextPage } from "app/data/navigation";
 
 export default connect(
   (state) => ({
     initialValues: state.firm,
+    services: state.services,
     form: state.form.firm,
   }),
-  { setFirm }
+  { setFirm, setServices }
 )(
   class FirmPage extends React.Component {
+
+    setDefaultServices(type) {
+      console.log(this.props.services)
+      if (isEmpty(this.props.services)) {
+        const defaultServices = {};
+        const filteredServicesList = filter(servicesList, service => service.type === type);
+        console.log(type, filteredServicesList)
+        filteredServicesList.forEach(service => {
+          defaultServices[service.value] = true;
+        });
+        this.props.setServices(defaultServices);
+      }
+    }
+
     handleSubmit(data) {
       this.props.setFirm(data);
       this.props.history.push(nextPage.path);
+      this.setDefaultServices(data.firmType);
     }
 
     formatNumber(value) {

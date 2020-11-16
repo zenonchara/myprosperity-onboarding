@@ -5,7 +5,7 @@ import { reduce } from "lodash";
 import PageTitle from "app/common/components/pagetitle";
 import ServicesForm from "./servicesForm";
 import { setServices } from "./servicesSlice";
-import { featuresPage as nextPage } from "app/data/navigation";
+import { prioritiesPage as nextPage } from "app/data/navigation";
 
 export default connect(
   (state) => ({

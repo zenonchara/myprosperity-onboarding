@@ -4,7 +4,7 @@ import Prefill from "app/prefill";
 export const plansSlice = createSlice({
   name: "plans",
   initialState: Prefill("plans") || {
-    selectedPlan: "basic",
+    selectedPlan: "enhance",
   },
   reducers: {
     setPlans: (state, action) => {

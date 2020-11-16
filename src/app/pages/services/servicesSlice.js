@@ -3,7 +3,7 @@ import Prefill from "app/prefill";
 
 export const servicesSlice = createSlice({
   name: "services",
-  initialState: Prefill("contact") || {},
+  initialState: Prefill("services") || {},
   reducers: {
     setServices: (state, action) => {
       state = action.payload;
